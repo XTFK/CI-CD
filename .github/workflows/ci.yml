@@ -1,0 +1,26 @@
+name: CI Pipeline
+
+on: 
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Install Dependencies
+        run: |
+          sudo apt update
+          sudo apt install python3 -y
+
+      - name: Compile Code
+        run: |
+          echo "No compile step for Python"
+
+      - name: Run the Program
+        run: |
+          python3 ci.py
