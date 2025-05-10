@@ -14,8 +14,8 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          sudo apt updat
-          sudo apt instal python3 -y
+          sudo apt update
+          sudo apt install python3 -y
 
       - name: Compile Code
         run: |
