@@ -1,1 +1,1 @@
-print("testing tugas CI-CD")
+print("Hello CI/CD"
