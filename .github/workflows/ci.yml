@@ -12,11 +12,6 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      - name: Install Dependencies
-        run: |
-          sudo apt update
-
-
       - name: Compile Code
         run: |
           echo "No compile step for Python"
