@@ -23,4 +23,4 @@ jobs:
 
       - name: Run the Program
         run: |
-          python3 tes.py
+          python3 test.py
