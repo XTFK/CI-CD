@@ -2,11 +2,7 @@ name: CI Pipeline
 
 on: 
   push:
-    branches:
-      - masterr
   pull_request:
-    branches:
-      - masterr
 
 jobs:
   build:
@@ -19,11 +15,12 @@ jobs:
       - name: Install Dependencies
         run: |
           sudo apt update
-          
+          sudo apt install python3 -y
+
       - name: Compile Code
         run: |
           echo "No compile step for Python"
 
       - name: Run the Program
         run: |
-          python3 tes.py
+          python3 hello.py
