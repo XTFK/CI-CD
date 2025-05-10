@@ -2,7 +2,11 @@ name: CI Pipeline
 
 on: 
   push:
+    branches:
+      - masterr
   pull_request:
+    branches:
+      - masterr
 
 jobs:
   build:
