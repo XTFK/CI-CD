@@ -1,0 +1,29 @@
+name: CI Pipeline
+
+on: 
+  push:
+    branches:
+      - masterr
+  pull_request:
+    branches:
+      - masterr
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Install Dependencies
+        run: |
+          sudo apt update
+          
+      - name: Compile Code
+        run: |
+          echo "No compile step for Python"
+
+      - name: Run the Program
+        run: |
+          python3 tes.py
