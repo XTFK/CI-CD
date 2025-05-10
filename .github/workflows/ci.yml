@@ -15,7 +15,6 @@ jobs:
       - name: Install Dependencies
         run: |
           sudo apt update
-          sudo apt install python3 -y
 
       - name: Compile Code
         run: |
@@ -23,4 +22,4 @@ jobs:
 
       - name: Run the Program
         run: |
-          python3 test.py
+          python3 tes.py
