@@ -1,15 +1,20 @@
+print("Testing kalkulatorr python"
+
 def tambah(x, y):
     return x + y
 
 def kurang(x, y):
     return x - y
 
+def kali(x, y):
+    return x * y
+
 def bagi(x, y):
     if y != 0:
         return x / y
     else:
         return "Tidak bisa membagi dengan nol."
-        
+
 print("Pilih Operasi:")
 print("1. Tambah")
 print("2. Kurang")
