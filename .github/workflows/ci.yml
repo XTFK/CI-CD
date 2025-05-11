@@ -1,26 +1,30 @@
-name: CI Pipeline
+name: Python CI
 
-on: 
+on:
   push:
+    branches: [ "main" ]
   pull_request:
+    branches: [ "main" ]
 
 jobs:
   build:
+
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
+    - name: Checkout Repository
+      uses: actions/checkout@v3
 
-      - name: Install Dependencies
-        run: |
-          sudo apt updat
-          sudo apt instal python3 -y
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
 
-      - name: Compile Code
-        run: |
-          echo "No compile step for Python"
+    - name: Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-      - name: Run the Program
-        run: |
-          python3 tes.py
+    - name: Run Tests
+      run: |
+        echo "Belum ada pengujian otomatis."  # Ganti dengan pytest nanti jika ada
